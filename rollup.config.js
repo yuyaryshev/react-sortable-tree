@@ -36,7 +36,7 @@ export default {
   plugins: [
     typescript({
       typescript: require('typescript'),
-      check: false,
+      //      check: false,
     }),
     //    nodeResolve(),
     postcss({ name: './style.css' }),

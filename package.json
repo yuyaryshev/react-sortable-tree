@@ -5,7 +5,7 @@
   "scripts": {
     "prebuild": "pnpm run clean",
     "build": "npm run build:clean && npm run build:ts && npm run build:storybook",
-    "build:storybook": "build-storybook -o build -c src/.storybook",
+    "build:storybook": "build-storybook -o build -c ts_out/src/.storybook",
     "build:ts": "rm -rf ./dist/* & npx rollup -c",
     "build:clean": "rm -rf ./dist/*",
     "clean": "rimraf dist",
@@ -15,7 +15,7 @@
     "release": "standard-version",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "storybook": "start-storybook -p ${PORT:-3001} -h 0.0.0.0",
+    "storybook": "start-storybook -p ${PORT:-3001} -h 0.0.0.0 -c ts_out/src/.storybook",
     "deploy": "gh-pages -d build",
     "watch": "babel src --config-file ./babel.ts.config.js --out-dir ts_out/src --extensions \".js,.jsx,.ts,.tsx\"  --copy-files --source-maps inline -w",
     "ycplmon": "node ..\\ycplmon_amaglion\\ts_out\\src\\ycplmon.js src"
