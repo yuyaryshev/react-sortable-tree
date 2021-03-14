@@ -59,7 +59,6 @@
     }
   },
   "browserslist": [
-    "IE 11",
     "last 2 versions",
     "> 1%"
   ],
@@ -69,7 +68,6 @@
     "prop-types": "^15.6.1",
     "react-dnd": "14.0.1",
     "react-dnd-html5-backend": "14.0.0",
-    "react-lifecycles-compat": "^3.0.4",
     "react-virtualized": "^9.21.2"
   },
   "peerDependencies": {

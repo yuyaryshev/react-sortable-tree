@@ -4,7 +4,6 @@ dependencies:
   prop-types: 15.7.2
   react-dnd: 14.0.1_react@16.14.0
   react-dnd-html5-backend: 14.0.0
-  react-lifecycles-compat: 3.0.4
   react-virtualized: 9.22.3_react-dom@16.14.0+react@16.14.0
 devDependencies:
   '@babel/cli': 7.13.10_@babel+core@7.13.10
@@ -16408,7 +16407,6 @@ specifiers:
   react-dnd-touch-backend: 14.0.0
   react-dom: ^16.11.0
   react-hot-loader: ^4.12.17
-  react-lifecycles-compat: ^3.0.4
   react-sortable-tree-theme-file-explorer: ^2.0.0
   react-test-renderer: ^16.11.0
   react-virtualized: ^9.21.2
