@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SortableTree from '../src';
+import SortableTree from '..';
 // In your own app, you would need to use import styles once in the app
 // import 'react-sortable-tree/styles.css';
 
@@ -64,7 +64,7 @@ export default class App extends Component {
           canDrop={canDrop}
           // Need to set getNodeKey to get meaningful ids in paths
           getNodeKey={({ node }) => node.id}
-          onChange={treeData => this.setState({ treeData })}
+          onChange={(treeData) => this.setState({ treeData })}
         />
       </div>
     );

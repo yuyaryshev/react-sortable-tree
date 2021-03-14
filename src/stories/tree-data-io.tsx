@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SortableTree, { getFlatDataFromTree, getTreeFromFlatData } from '../src';
+import SortableTree, { getFlatDataFromTree, getTreeFromFlatData } from '..';
 // In your own app, you would need to use import styles once in the app
 // import 'react-sortable-tree/styles.css';
 
@@ -16,9 +16,9 @@ export default class App extends Component {
 
     this.state = {
       treeData: getTreeFromFlatData({
-        flatData: initialData.map(node => ({ ...node, title: node.name })),
-        getKey: node => node.id, // resolve a node's key
-        getParentKey: node => node.parent, // resolve a node's parent's key
+        flatData: initialData.map((node) => ({ ...node, title: node.name })),
+        getKey: (node) => node.id, // resolve a node's key
+        getParentKey: (node) => node.parent, // resolve a node's parent's key
         rootKey: null, // The value of the parent key when there is no parent (i.e., at root level)
       }),
     };
@@ -44,7 +44,7 @@ export default class App extends Component {
         <div style={{ height: 250 }}>
           <SortableTree
             treeData={this.state.treeData}
-            onChange={treeData => this.setState({ treeData })}
+            onChange={(treeData) => this.setState({ treeData })}
           />
         </div>
         <hr />

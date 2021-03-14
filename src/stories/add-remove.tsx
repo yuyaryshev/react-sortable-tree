@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SortableTree, { addNodeUnderParent, removeNodeAtPath } from '../src';
+import SortableTree, { addNodeUnderParent, removeNodeAtPath } from '..';
 // In your own app, you would need to use import styles once in the app
 // import 'react-sortable-tree/styles.css';
 
@@ -73,12 +73,12 @@ export default class App extends Component {
         <div style={{ height: 300 }}>
           <SortableTree
             treeData={this.state.treeData}
-            onChange={treeData => this.setState({ treeData })}
+            onChange={(treeData) => this.setState({ treeData })}
             generateNodeProps={({ node, path }) => ({
               buttons: [
                 <button
                   onClick={() =>
-                    this.setState(state => ({
+                    this.setState((state) => ({
                       treeData: addNodeUnderParent({
                         treeData: state.treeData,
                         parentKey: path[path.length - 1],
@@ -98,7 +98,7 @@ export default class App extends Component {
                 </button>,
                 <button
                   onClick={() =>
-                    this.setState(state => ({
+                    this.setState((state) => ({
                       treeData: removeNodeAtPath({
                         treeData: state.treeData,
                         path,
@@ -116,7 +116,7 @@ export default class App extends Component {
 
         <button
           onClick={() =>
-            this.setState(state => ({
+            this.setState((state) => ({
               treeData: state.treeData.concat({
                 title: `${getRandomName()} ${getRandomName()}sson`,
               }),
@@ -133,7 +133,7 @@ export default class App extends Component {
             type="checkbox"
             checked={this.state.addAsFirstChild}
             onChange={() =>
-              this.setState(state => ({
+              this.setState((state) => ({
                 addAsFirstChild: !state.addAsFirstChild,
               }))
             }

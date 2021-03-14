@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { DndProvider, DragSource } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import { SortableTreeWithoutDndContext as SortableTree } from '../src';
+import { SortableTreeWithoutDndContext as SortableTree } from '..';
 // In your own app, you would need to use import styles once in the app
 // import 'react-sortable-tree/styles.css';
 
@@ -17,7 +17,7 @@ const externalNodeSpec = {
   // This needs to return an object with a property `node` in it.
   // Object rest spread is recommended to avoid side effects of
   // referencing the same object in different trees.
-  beginDrag: componentProps => ({ node: { ...componentProps.node } }),
+  beginDrag: (componentProps) => ({ node: { ...componentProps.node } }),
 };
 const externalNodeCollect = (connect /* , monitor */) => ({
   connectDragSource: connect.dragSource(),
@@ -71,7 +71,7 @@ class App extends Component {
           <div style={{ height: 300 }}>
             <SortableTree
               treeData={this.state.treeData}
-              onChange={treeData => this.setState({ treeData })}
+              onChange={(treeData) => this.setState({ treeData })}
               dndType={externalNodeType}
             />
           </div>

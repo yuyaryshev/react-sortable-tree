@@ -1,0 +1,1 @@
+{"version":3,"file":"manager.js","sourceRoot":"","sources":["manager.ts"],"names":[],"mappings":";;AAAA,4CAA2C;AAC3C,oDAAmD;AAEnD,eAAM,CAAC,SAAS,CAAC;IACf,KAAK,EAAE,eAAM,CAAC;QACZ,IAAI,EAAE,OAAO;QACb,UAAU,EAAE,qBAAqB;QACjC,QAAQ,EAAE,4DAA4D;QACtE,YAAY,EAAE,EAAE;KACjB,CAAC;CACH,CAAC,CAAC"}

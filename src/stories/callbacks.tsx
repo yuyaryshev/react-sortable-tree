@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SortableTree from '../src';
+import SortableTree from '..';
 // In your own app, you would need to use import styles once in the app
 // import 'react-sortable-tree/styles.css';
 
@@ -32,11 +32,13 @@ export default class App extends Component {
         <div style={{ height: 300 }}>
           <SortableTree
             treeData={this.state.treeData}
-            onChange={treeData => this.setState({ treeData })}
+            onChange={(treeData) => this.setState({ treeData })}
             // Need to set getNodeKey to get meaningful ids in paths
             getNodeKey={({ node }) => `node${node.title}`}
-            onVisibilityToggle={args => recordCall('onVisibilityToggle', args)}
-            onMoveNode={args => {
+            onVisibilityToggle={(args) =>
+              recordCall('onVisibilityToggle', args)
+            }
+            onMoveNode={(args) => {
               recordCall('onMoveNode', args);
               const { prevPath, nextPath, node } = args;
               this.setState({
@@ -45,7 +47,9 @@ export default class App extends Component {
                 lastMoveNode: node,
               });
             }}
-            onDragStateChanged={args => recordCall('onDragStateChanged', args)}
+            onDragStateChanged={(args) =>
+              recordCall('onDragStateChanged', args)
+            }
           />
         </div>
         {lastMoveNode && (

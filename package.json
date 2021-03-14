@@ -8,7 +8,7 @@
     "build:storybook": "build-storybook -o build",
     "clean": "rimraf dist",
     "clean:storybook": "rimraf build",
-    "prettier": "prettier --write \"{src,example/src,stories}/**/*.{js,css,md}\"",
+    "prettier": "prettier --write \"{src,example/src,src/stories}/**/*.{js,css,md}\"",
     "prepublishOnly": "pnpm run test && pnpm run build",
     "release": "standard-version",
     "test": "jest",
