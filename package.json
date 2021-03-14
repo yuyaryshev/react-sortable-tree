@@ -35,8 +35,9 @@
   ],
   "license": "MIT",
   "jest": {
+    "rootDir": "./ts_out",
     "setupFilesAfterEnv": [
-      "./node_modules/jest-enzyme/lib/index.js"
+      "../node_modules/jest-enzyme/lib/index.js"
     ],
     "setupFiles": [
       "./src/test-config/shim.js",
