@@ -156,7 +156,8 @@
     "rimraf": "^3.0.0",
     "rollup": "2.41.2",
     "rollup-plugin-postcss": "4.0.0",
-    "standard-version": "9.1.1"
+    "standard-version": "9.1.1",
+    "typescript": "^4.2.3"
   },
   "keywords": [
     "react",
