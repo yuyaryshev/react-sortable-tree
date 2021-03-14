@@ -1,6 +1,6 @@
-import nodeResolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import babel from 'rollup-plugin-babel';
+import nodeResolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import babel from '@rollup/plugin-babel';
 import postcss from 'rollup-plugin-postcss';
 
 import pkg from './package.json';
@@ -31,7 +31,7 @@ export default {
   ],
   plugins: [
     nodeResolve(),
-    postcss({ extract: './style.css' }),
+    postcss({ name: './style.css' }),
     commonjs({
       include: 'node_modules/**',
     }),
